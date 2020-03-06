@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <transition-group name="list" tag="div">
         <div
                 v-for="(device, index) in devices"
                 :key="index"
@@ -22,7 +22,7 @@
 
             </div>
         </div>
-    </div>
+    </transition-group>
 </template>
 
 <script>
@@ -43,3 +43,19 @@
         }
     }
 </script>
+
+<style>
+    .list-item {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .list-enter-active, .list-leave-active {
+        transition: all 1s;
+    }
+
+    .list-enter, .list-leave-to {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+</style>
