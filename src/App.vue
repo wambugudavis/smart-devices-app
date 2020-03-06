@@ -9,6 +9,6 @@
 
     body {
         font-family: 'Work Sans', sans-serif;
-        @apply bg-gray-100 text-gray-900 overflow-hidden;
+        @apply bg-gray-100 text-gray-900;
     }
 </style>

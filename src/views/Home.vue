@@ -36,6 +36,7 @@
 </template>
 
 <script>
+    import {mapState, mapActions} from 'vuex'
     import DeviceList from '../components/DeviceList'
 
     export default {
@@ -43,43 +44,18 @@
         components: {
             DeviceList
         },
-        data: () => {
-            return {
-                devices: [
-                    {
-                        "id": 1,
-                        "updated_at": "2020-03-06 10:37:30",
-                        "description": "Updated Sample description",
-                        "manufacturer": {
-                            "id": 1,
-                            "name": "Muthaiga Industrials"
-                        }
-                    },
-                    {
-                        "id": 3,
-                        "updated_at": "2020-03-06 10:36:21",
-                        "description": "This is 3rd sample description",
-                        "manufacturer": {
-                            "id": 2,
-                            "name": "Other"
-                        }
-                    }
-                ],
-                manufacturers: [
-                    {
-                        "id": 1,
-                        "created_at": "2020-03-06 10:24:56",
-                        "updated_at": "2020-03-06 10:24:56",
-                        "name": "Muthaiga Industrials"
-                    },
-                    {
-                        "id": 2,
-                        "created_at": "2020-03-06 10:24:56",
-                        "updated_at": "2020-03-06 10:24:56",
-                        "name": "Other"
-                    }
-                ]
-            }
+        computed: {
+            ...mapState(['devices', 'manufacturers'])
+        },
+        methods: {
+            ...mapActions({
+                fetchManufactures: 'fetchManufactures',
+                fetchDevices: 'fetchDevices'
+            })
+        },
+        created() {
+            this.fetchManufactures()
+            this.fetchDevices()
         }
     }
 </script>
