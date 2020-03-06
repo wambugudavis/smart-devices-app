@@ -1,0 +1,16 @@
+@tailwind base;
+.section {
+    @apply py-4 px-6;
+}
+
+.badge {
+    @apply flex items-center justify-center mr-4 w-10 h-10 rounded-full font-semibold;
+}
+
+.label {
+    @apply bg-gray-200 py-1 px-2 rounded-lg text-sm text-gray-700 my-2 font-semibold
+}
+
+@tailwind components;
+@tailwind utilities;
+
