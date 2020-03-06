@@ -69,7 +69,7 @@
             <div class="bg-white w-full md:w-1/2 section shadow-lg rounded-lg flex flex-col">
                 <form class="px-6 py-4">
                     <div class="mb-4">
-                        <label class="block text-gray-700 text-sm font-semibold mb-2" for="username">
+                        <label class="block text-gray-700 text-sm font-semibold mb-2">
                             Change manufacturer
                         </label>
                         <div class="relative">

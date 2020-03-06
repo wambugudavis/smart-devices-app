@@ -1,29 +1,34 @@
-# smart-devices-app
+# Smart Devices
 
-## Project setup
+A CRUD application that consumes APIS served from this [repository](https://github.com/wambugudavis/smart-devices/tree/deploy)
+
+## Demo
+[App](https://dwambugu-smart-devices.netlify.com/)
+
+## Installing
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+##### Development
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
+##### Production
 ```
 yarn build
 ```
-
-### Run your unit tests
-```
-yarn test:unit
-```
-
-### Lints and fixes files
+##### Lints and fixes files
 ```
 yarn lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Built With
+
+* [VueJS](https://vuejs.org/) - The web framework used
+* [Tailwind](https://tailwindcss.com/) - CSS framework
+
+## Authors
+
+* **[Davis Wambugu](https://github.com/wambugudavis)**
